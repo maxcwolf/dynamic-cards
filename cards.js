@@ -8,7 +8,11 @@ var createButtonEl = document.getElementById('create');
 //create function to add a new div with a button to the card section container
 function clickCreate (event) {
     if(event.target.id === 'create') {
-        cardParentEl.innerHTML += `<div class='card'><button id='delete'>Delete</button></div>`;
+        cardParentEl.innerHTML += `
+            <div class='card'>
+            <p>${document.getElementById('textarea').value}</p>
+            <button id='delete'>Delete</button>
+            </div>`;
     }
 }
 
@@ -27,5 +31,3 @@ function clickDelete (event) {
 
 //execture the clickDelete function when any element inside the cardSelection class element is clicked
 cardParentEl.addEventListener('click', clickDelete);
-
-//test change
